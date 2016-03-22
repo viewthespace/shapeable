@@ -3,7 +3,7 @@ require 'action_controller'
 require 'action_dispatch'
 require 'rails/railtie'
 require 'active_model_serializers'
-require_relative '../lib/playdough'
+require_relative '../lib/shapeable'
 
 Dir[Dir.pwd + '/spec/fixtures/*.rb'].each { |f| require f }
 Dir[Dir.pwd + '/spec/fixtures/models/**/*.rb'].each { |f| require f }

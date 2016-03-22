@@ -1,6 +1,6 @@
-require 'playdough/version'
+require 'shapeable/version'
 
-module Playdough
+module Shapeable
 
   def versioner mod, **opts
     normalize_options(opts)
@@ -32,6 +32,6 @@ end
 if defined? ActionController::Base
   ActionController::Base.class_eval do
     attr_accessor :versioner_serializer
-    extend Playdough
+    extend Shapeable
   end
 end

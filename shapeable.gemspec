@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'playdough/version'
+require 'shapeable/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'playdough'
-  spec.version       = Playdough::VERSION
+  spec.name          = 'shapeable'
+  spec.version       = Shapeable::VERSION
   spec.authors       = ['Shawn O\'Mara', 'Dean Nasseri']
   spec.email         = ['shaw3257@gmail.com']
 
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
                         controller reuse by controllers delegating resource versioning and shaping
                         to the serializer level.'
 
-  spec.homepage      = 'https://github.com/viewthespace/playdough'
+  spec.homepage      = 'https://github.com/viewthespace/shapeable'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
