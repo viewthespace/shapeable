@@ -86,6 +86,9 @@ Shapeable.configure do |config|
 end
 ```
 
+## Enforcing Versioning
+
+There is an additional option, `enforce_versioning` which can be passed to `Shapeable.configure`. By default it is set to true. When set to false, version will be ignored, and you can construct shapes such as `Serializers::Foo::FooDefaultSerializer` without the version module prepended.
 
 ## Gotchas
 

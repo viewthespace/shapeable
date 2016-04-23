@@ -1,6 +1,7 @@
 require 'shapeable/version'
 require 'shapeable/configuration'
 require 'shapeable/controller_methods'
+require 'shapeable/errors'
 
 module Shapeable
   CONFIG_FILE = './config/shapeable.rb'

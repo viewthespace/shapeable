@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe FoosController, type: :controller do
 
+
   describe '#show' do
 
     it 'uses the v1 default serializer' do
@@ -38,6 +39,21 @@ describe FoosController, type: :controller do
       get :show, id: 1
       expect(JSON.parse(response.body)['foo_bar_baz']['first_name']).to eq('Shawn v1 bar baz')
     end
+
+  end
+
+  describe '#show without versioning enforced' do
+
+    before do
+      Shapeable.configuration_data.enforce_versioning = false
+    end
+
+    it 'uses the foo full serializer' do
+      request.env['HTTP_ACCEPT'] = 'application/json; version=1 shape=full'
+      get :show, id: 1
+      expect(JSON.parse(response.body)['foo_full']['first_name']).to eq('Shawn full')
+    end
+
 
   end
 
